@@ -1,0 +1,14 @@
+{
+  "name": "toggle-invisibles",
+  "main": "./lib/toggle-invisibles",
+  "version": "0.0.0",
+  "description": "Toggles the display of invisible characters",
+  "activationEvents": ["toggle-invisibles:toggle"],
+  "repository": "https://github.com/lee-dohm/toggle-invisibles",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
