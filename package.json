@@ -1,10 +1,13 @@
 {
   "name": "toggle-invisibles",
   "main": "./lib/toggle-invisibles",
-  "version": "0.0.1",
-  "description": "Toggles the display of invisible characters",
+  "version": "0.1.0",
+  "description": "Toggles the display of invisible characters and/or the indent guide",
   "activationEvents": [
-    "toggle-invisibles:toggle"
+    "toggle-invisibles:toggle",
+    "toggle-invisibles:toggleBoth",
+    "toggle-invisibles:toggleInvisibles",
+    "toggle-invisibles:toggleIndentGuide"
   ],
   "repository": "https://github.com/lee-dohm/toggle-invisibles",
   "license": "MIT",
