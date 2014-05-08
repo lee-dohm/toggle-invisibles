@@ -2,7 +2,7 @@
   "name": "toggle-invisibles",
   "main": "./lib/toggle-invisibles",
   "version": "0.0.1",
-  "description": "Toggles the display of invisible characters and/or the indent guide",
+  "description": "Toggles the display of invisible characters and/or the wrap guide",
   "activationEvents": [
     "toggle-invisibles:toggle",
     "toggle-invisibles:toggleBoth",
