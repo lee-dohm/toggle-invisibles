@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2014 by Lifted Studios. All Rights Reserved.
+# Copyright (c) 2014-2015 by Lifted Studios. All Rights Reserved.
 #
 
 toggleBoth = ->
@@ -11,15 +11,18 @@ toggleBoth = ->
     atom.config.set 'editor.showIndentGuide', yes
 
 toggleInvisibles = ->
-  atom.config.toggle 'editor.showInvisibles'
+  atom.config.set('editor.showInvisibles', (not atom.config.get('editor.showInvisibles')))
 
 toggleIndentGuide = ->
-  atom.config.toggle 'editor.showIndentGuide'
+  atom.config.set('editor.showIndentGuide', (not atom.config.get('editor.showIndentGuide')))
 
 module.exports =
-  activate: (state) ->
-    # keep toggle-invisibles:toggle the same for backwards compatibility
-    atom.workspaceView.command 'toggle-invisibles:toggle', -> toggleInvisibles()
-    atom.workspaceView.command 'toggle-invisibles:toggleBoth', -> toggleBoth()
-    atom.workspaceView.command 'toggle-invisibles:toggleInvisibles', -> toggleInvisibles()
-    atom.workspaceView.command 'toggle-invisibles:toggleIndentGuide', -> toggleIndentGuide()
+  activate: ->
+    @disposables = atom.commands.add 'atom-workspace',
+      'toggle-invisibles:toggle': -> toggleInvisibles()
+      'toggle-invisibles:toggle-both': -> toggleBoth()
+      'toggle-invisibles:toggle-invisibles': -> toggleInvisibles()
+      'toggle-invisibles:toggle-indent-guide': -> toggleIndentGuide()
+
+  deactivate: ->
+    @disposables.dispose()

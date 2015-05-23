@@ -2,19 +2,24 @@
   "name": "toggle-invisibles",
   "main": "./lib/toggle-invisibles",
   "version": "0.1.0",
-  "description": "Toggles the display of invisible characters and/or the wrap guide",
+  "description": "Toggles the display of invisible characters or indent guides",
+  "keywords": [
+    "invisibles",
+    "characters",
+    "indent",
+    "toggle"
+  ],
   "activationCommands": {
     "atom-workspace": [
       "toggle-invisibles:toggle",
-      "toggle-invisibles:toggleBoth",
-      "toggle-invisibles:toggleInvisibles",
-      "toggle-invisibles:toggleIndentGuide"
+      "toggle-invisibles:toggle-both",
+      "toggle-invisibles:toggle-invisibles",
+      "toggle-invisibles:toggle-indent-guide"
     ]
   },
   "repository": "https://github.com/lee-dohm/toggle-invisibles",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
-  },
-  "dependencies": {}
+    "atom": ">0.200.0 <2.0.0"
+  }
 }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **v0.2.0** &mdash; *Released: 23 May 2015*
+
+* Remove deprecations
+
 ## **v0.1.0** &mdash; *Released: 8 May 2014*
 
 * Add ability to toggle display of the wrap guide or both wrap guide and invisible characters
